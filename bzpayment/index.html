@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BzPayment — Funding Request &amp; Approval Management</title>
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<nav class="navbar-bz">
+  <div class="container-xl">
+    <div class="brand">
+      <img src="images/logo.png" alt="logo" width="220px" height="60px"/>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#companies">Companies</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#simulator">Live demo</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#ledger">Ledger</a>
+      <a href="#simulator" class="nav-cta">Request access</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container-xl hero-grid">
+    <div>
+      <span class="eyebrow">Funding request &amp; approval management</span>
+      <h1>One approval path for every <span class="hl">company you fund.</span></h1>
+      <p class="lede">BzPayment gives your five companies a single place to request funds, gives your Main Admin one clear queue to review them, and gives everyone a shared ledger once money moves.</p>
+      <div class="hero-actions">
+        <a href="#simulator" class="btn-primary-bz"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:7px;"><path d="M8 5v14l11-7z"/></svg>See the workflow in action</a>
+        <a href="#ledger" class="btn-ghost-bz">View transaction ledger</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>5</b><span>Companies onboarded</span></div>
+        <div class="stat"><b>1</b><span>Main Admin authority</span></div>
+        <div class="stat"><b id="statTotalHero">₹42.6L</b><span>Disbursed to date</span></div>
+        <div class="stat"><b>6.4 hrs</b><span>Avg. review time</span></div>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gnode" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4FA6F5"/><stop offset="1" stop-color="#1544C7"/>
+          </linearGradient>
+        </defs>
+        <!-- company nodes -->
+        <g font-family="Inter, sans-serif">
+          <g>
+            <rect x="18" y="30" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#E1E8F4"/>
+            <circle cx="38" cy="50" r="6" fill="#4FA6F5"/>
+            <text x="52" y="54" font-size="12" fill="#16233A" font-weight="600">Solstice Retail</text>
+          </g>
+          <g>
+            <rect x="18" y="120" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#E1E8F4"/>
+            <circle cx="38" cy="140" r="6" fill="#4FA6F5"/>
+            <text x="52" y="144" font-size="12" fill="#16233A" font-weight="600">Meridian Logi.</text>
+          </g>
+          <g>
+            <rect x="18" y="210" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#E1E8F4"/>
+            <circle cx="38" cy="230" r="6" fill="#4FA6F5"/>
+            <text x="52" y="234" font-size="12" fill="#16233A" font-weight="600">Orbit Mfg.</text>
+          </g>
+          <g>
+            <rect x="18" y="300" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#E1E8F4"/>
+            <circle cx="38" cy="320" r="6" fill="#4FA6F5"/>
+            <text x="52" y="324" font-size="12" fill="#16233A" font-weight="600">Larkspur Tex.</text>
+          </g>
+          <g>
+            <rect x="18" y="390" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#E1E8F4"/>
+            <circle cx="38" cy="410" r="6" fill="#4FA6F5"/>
+            <text x="52" y="414" font-size="12" fill="#16233A" font-weight="600">Nimbus Foods</text>
+          </g>
+        </g>
+        <!-- flow lines to hub -->
+        <g fill="none" stroke="#8FB6F2" stroke-width="2" class="flow-line">
+          <path d="M136 50 C 210 50, 210 210, 268 225"/>
+          <path d="M136 140 C 200 140, 220 200, 268 225"/>
+          <path d="M136 230 L 262 228"/>
+          <path d="M136 320 C 200 320, 220 260, 268 232"/>
+          <path d="M136 410 C 210 410, 210 250, 268 234"/>
+        </g>
+        <!-- hub: main admin -->
+        <g class="node-pulse">
+          <circle cx="300" cy="228" r="46" fill="url(#gnode)"/>
+          <path d="M300 208 a20 20 0 1 0 0.01 0" fill="none" stroke="#fff" stroke-width="2"/>
+          <circle cx="300" cy="220" r="8" fill="#fff"/>
+          <path d="M286 240 q14 -14 28 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+        <text x="300" y="290" font-size="12.5" text-anchor="middle" fill="#16233A" font-weight="700">Main Admin</text>
+        <text x="300" y="304" font-size="10.5" text-anchor="middle" fill="#8794A8">Reviews every request</text>
+
+        <!-- branch accept -->
+        <g stroke-width="2" fill="none" class="flow-line" stroke="#1AAE6F">
+          <path d="M338 215 C 400 190, 420 150, 452 110"/>
+        </g>
+        <circle cx="466" cy="96" r="24" fill="#E4F7EE" stroke="#12A25D" stroke-width="1.5"/>
+        <path d="M457 96 l6 6 12 -14" fill="none" stroke="#12A25D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="466" y="132" font-size="11.5" text-anchor="middle" fill="#12A25D" font-weight="700">Accepted</text>
+        <path d="M466 122 L 466 175" stroke="#1AAE6F" stroke-width="2" class="flow-line" fill="none"/>
+        <rect x="424" y="176" width="84" height="34" rx="8" fill="#FFFFFF" stroke="#12A25D"/>
+        <text x="466" y="198" font-size="11" text-anchor="middle" fill="#0B1626" font-weight="600">Payment sent</text>
+
+        <!-- branch reject -->
+        <g stroke-width="2" fill="none" class="flow-line" stroke="#DC3A3A">
+          <path d="M338 245 C 400 275, 420 320, 452 356"/>
+        </g>
+        <circle cx="466" cy="372" r="24" fill="#FCEAEA" stroke="#DC3A3A" stroke-width="1.5"/>
+        <path d="M457 363 l18 18 M475 363 l-18 18" stroke="#DC3A3A" stroke-width="2.6" stroke-linecap="round"/>
+        <text x="466" y="410" font-size="11.5" text-anchor="middle" fill="#DC3A3A" font-weight="700">Rejected — stops here</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="companies" class="section-pad">
+  <div class="container-xl">
+    <div class="section-head">
+      <h2>Five companies. One shared source of truth.</h2>
+      <p>Every company keeps its own balance and request history. The Main Admin sees all five in a single view.</p>
+    </div>
+    <div class="company-grid" id="companyGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<section id="workflow" class="section-pad" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container-xl">
+    <div class="section-head">
+      <h2>How a request moves through the system</h2>
+      <p>Six steps, one decision point. If the Main Admin rejects, the request stops there — nothing is charged and nothing moves further.</p>
+    </div>
+    <div class="workflow-grid">
+      <div class="flow-card">
+        <div class="flow-icon"><img src="images/step_1_request_1789710922110.jpg" alt="Step 1"></div>
+        <h5>Company submits request</h5>
+        <p>A company raises a funding request with an amount and reason.</p>
+        <span class="flow-arrow"></span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-icon"><img src="images/step_2_review_1789710934853.jpg" alt="Step 2"></div>
+        <h5>Main Admin reviews</h5>
+        <p>The request lands in one queue for the Main Admin to check.</p>
+        <span class="flow-arrow"></span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-icon"><img src="images/step_3_decision_1789710948338.jpg" alt="Step 3"></div>
+        <h5>Accept or reject</h5>
+        <p>One decision: approve the request, or reject it with a reason.</p>
+        <span class="flow-arrow"></span>
+      </div>
+      <div class="flow-card go">
+        <div class="flow-icon"><img src="images/step_4_payment_1789710959610.jpg" alt="Step 4"></div>
+        <h5>Payment processing</h5>
+        <p>Accepted requests move straight into payment processing.</p>
+        <span class="flow-arrow"></span>
+      </div>
+      <div class="flow-card go">
+        <div class="flow-icon"><img src="images/step_5_balance_1789710974452.jpg" alt="Step 5"></div>
+        <h5>Fund balance updated</h5>
+        <p>The company's balance and the Main Admin's totals update together.</p>
+        <span class="flow-arrow"></span>
+      </div>
+      <div class="flow-card go">
+        <div class="flow-icon"><img src="images/step_6_ledger_1789710988261.jpg" alt="Step 6"></div>
+        <h5>Logged to the ledger</h5>
+        <p>Every outcome — approved or rejected — is recorded and traceable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="simulator" class="section-pad">
+  <div class="container-xl">
+    <div class="section-head">
+      <h2>Try the live workflow</h2>
+      <p>Submit a sample funding request as a company, then switch hats and decide as the Main Admin. Watch the timeline, the payment step, and the ledger update in real time.</p>
+    </div>
+    <div class="sim-wrap">
+      <div class="sim-form">
+        <h3>New funding request</h3>
+        <p class="hint">Acting as: a connected company</p>
+        <label class="form-label-bz" for="simCompany">Company</label>
+        <select class="form-control-bz" id="simCompany">
+          <option>Solstice Retail Pvt Ltd</option>
+          <option>Meridian Logistics</option>
+          <option>Orbit Manufacturing</option>
+          <option>Larkspur Textiles</option>
+          <option>Nimbus Foods</option>
+        </select>
+        <label class="form-label-bz" for="simAmount">Amount requested (₹)</label>
+        <input class="form-control-bz" id="simAmount" type="number" min="1000" step="500" placeholder="e.g. 250000" value="250000">
+        <label class="form-label-bz" for="simReason">Reason</label>
+        <input class="form-control-bz" id="simReason" type="text" placeholder="e.g. Vendor payout for September" value="Vendor payout for September">
+        <button class="btn-submit-bz" id="simSubmit">Submit funding request</button>
+      </div>
+      <div class="sim-timeline">
+        <h3>Approval timeline</h3>
+        <div id="tlContainer">
+          <p class="tl-empty">Submit a request on the left to see it move through review, decision, payment and the ledger.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard" class="" style="background:var(--bg);  ">
+  <div class="container-xl">
+    <div class="section-head">
+      <h2>Fund management dashboard</h2>
+      <p>The Main Admin's running view of every request across all five companies.</p>
+    </div>
+    <div class="stat-grid" id="statGrid">
+      <div class="stat-card">
+        <div class="stat-top"><span class="lbl">Total disbursed</span><span class="stat-icon" style="background:var(--blue-100);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span></div>
+        <div class="num" id="statDisbursed">₹42,60,000</div>
+        <div class="lbl">Across 5 companies</div>
+        <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M9 6h9v9"/></svg>12.4% vs last month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span class="lbl">Pending review</span><span class="stat-icon" style="background:var(--amber-soft);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span></div>
+        <div class="num" id="statPending">1</div>
+        <div class="lbl">Awaiting Main Admin</div>
+        <div class="stat-trend flat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>Same as yesterday</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span class="lbl">Approved this month</span><span class="stat-icon" style="background:var(--green-soft);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span></div>
+        <div class="num" id="statApproved">14</div>
+        <div class="lbl">98.2% on first review</div>
+        <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M9 6h9v9"/></svg>3 more than last month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span class="lbl">Rejected this month</span><span class="stat-icon" style="background:var(--red-soft);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg></span></div>
+        <div class="num" id="statRejected">2</div>
+        <div class="lbl">Stopped before payment</div>
+        <div class="stat-trend down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M15 18H6V9"/></svg>1 fewer than last month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ledger" class="section-pad">
+  <div class="container-xl">
+    <div class="section-head">
+      <h2>Transaction ledger</h2>
+      <p>Every request the Main Admin has decided on, with its final outcome.</p>
+    </div>
+    <div class="table-wrap">
+      <div class="table-filters" id="tableFilters">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="Completed">Completed</button>
+        <button class="filter-chip" data-filter="Pending">Pending</button>
+        <button class="filter-chip" data-filter="Rejected">Rejected</button>
+      </div>
+      <div class="table-scroll">
+        <table class="bz-table">
+          <thead>
+            <tr>
+              <th>Txn ID</th><th>Company</th><th>Amount</th><th>Requested</th><th>Status</th><th>Processed by</th>
+            </tr>
+          </thead>
+          <tbody id="txnBody"><!-- injected by JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bz-footer-new">
+  <div class="container-xl">
+    
+    <!-- CTA floating box -->
+    <div class="cta-box">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      </div>
+      <div class="cta-content">
+        <h3>Ready to streamline your business payments?</h3>
+        <p class="cta-desc">Join the top companies using BzPayment to manage their funding requests securely and efficiently in one place.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn-cta-primary">Request Access Now</a>
+          <a href="#simulator" class="btn-cta-secondary">Try Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-card">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Desc -->
+        <div class="footer-brand-col">
+          <div class="brand" style="margin-bottom:16px;">
+            <img src="images/logo.png" alt="logo" width="220px" height="60px" style="object-fit:contain;" />
+          </div>
+          <p class="footer-desc">The ultimate enterprise suite for managing operations, and automating business payments.</p>
+          
+          <div class="built-card">
+            <div class="built-icon">D</div>
+            <div class="built-text">
+              <span>Built & maintained by</span>
+              <strong>Digitalks Techno LLP</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Products -->
+        <div class="footer-links-col">
+          <h4>PRODUCTS</h4>
+          <a href="#companies">Companies</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#simulator">Simulator</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#ledger">Ledger</a>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-links-col">
+          <h4>COMPANY</h4>
+          <a href="https://digitalkstechno.com/about-us">About Us</a>
+          <a href="https://digitalkstechno.com/ourproducts">Our Products</a>
+          <a href="https://digitalkstechno.com/contact-us">Contact Us</a>
+          <a href="https://digitalkstechno.com/career">Careers</a>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-contact-col">
+          <h4>CONTACT & SUPPORT</h4>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span><a href="mailto:info@digitalkstechno.com" style="color: inherit; text-decoration: none;">info@digitalkstechno.com</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span><a href="tel:+917016268071" style="color: inherit; text-decoration: none;">+91 70162 68071</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span><a href="tel:+918866779008" style="color: inherit; text-decoration: none;">+91 88667 79008</a></span>
+            </li>
+            <li class="address-li">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><a href="https://maps.google.com/?q=2nd+floor,+C1,+above+Adarsh+Farsan+Mart,+Baroda+Prestige,+Ganesh+Colony,+Varachha,+Surat,+Gujarat+395010" target="_blank" style="color: inherit; text-decoration: none;">2nd floor, C1, above Adarsh Farsan Mart, Baroda Prestige, Ganesh Colony, Varachha, Surat, Gujarat 395010</a></span>
+            </li>
+          </ul>
+          
+          <div class="social-icons" style="margin-top: 24px;">
+            <a href="https://www.facebook.com/DigiTalksTechnoLLP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/digitalks_techno_llp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://www.youtube.com/@DigiTalks_Techno_LLP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/105383945"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="fb-left">© 2026 BzPayment. All rights reserved.</div>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------------- data ---------------- */
+const companies = [
+  { name:"Solstice Retail Pvt Ltd", industry:"Retail chain", balance:1120000, cap:1600000, pending:1, approved:6 },
+  { name:"Meridian Logistics", industry:"Logistics & freight", balance:860000, cap:1400000, pending:0, approved:4 },
+  { name:"Orbit Manufacturing", industry:"Industrial manufacturing", balance:1450000, cap:2000000, pending:0, approved:5 },
+  { name:"Larkspur Textiles", industry:"Textile exports", balance:530000, cap:1000000, pending:0, approved:3 },
+  { name:"Nimbus Foods", industry:"F&B distribution", balance:700000, cap:1200000, pending:0, approved:4 },
+];
+
+const coAccent   = ["#2F7CF0","#12A25D","#E7960C","#8B5CF6","#38BDF8"];
+const coIconBg   = ["#E9F2FE","#E4F7EE","#FCF2DE","#F1ECFE","#E7F8FE"];
+const coIconColor = coAccent;
+const coIcons = [
+  '<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>',
+  '<path d="M3 17l4-6 4 3 5-8 5 6"/><circle cx="7" cy="11" r="1.2" fill="currentColor" stroke="none"/>',
+  '<path d="M3 21V9l7-4 7 4v12M8 21v-5h8v5"/>',
+  '<path d="M4 4h16v16H4z"/><path d="M4 9h16M9 21V9"/>',
+  '<circle cx="12" cy="12" r="9"/><path d="M8 13c1.2 1.4 2.6 2 4 2s2.8-.6 4-2"/>'
+];
+
+function fmtINR(n){
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+
+let txns = [
+  { id:'TXN-10482', company:'Orbit Manufacturing', amount:480000, date:'12 Sep 2026', status:'Completed', by:'Ananya Rao' },
+  { id:'TXN-10479', company:'Nimbus Foods', amount:210000, date:'10 Sep 2026', status:'Completed', by:'Ananya Rao' },
+  { id:'TXN-10475', company:'Larkspur Textiles', amount:150000, date:'08 Sep 2026', status:'Rejected', by:'Ananya Rao' },
+  { id:'TXN-10471', company:'Meridian Logistics', amount:320000, date:'05 Sep 2026', status:'Completed', by:'Ananya Rao' },
+  { id:'TXN-10466', company:'Solstice Retail Pvt Ltd', amount:275000, date:'03 Sep 2026', status:'Completed', by:'Ananya Rao' },
+  { id:'TXN-10460', company:'Solstice Retail Pvt Ltd', amount:90000, date:'29 Aug 2026', status:'Rejected', by:'Ananya Rao' },
+  { id:'TXN-10458', company:'Solstice Retail Pvt Ltd', amount:130000, date:'27 Aug 2026', status:'Pending', by:'—' },
+];
+let txnCounter = 10483;
+let stats = { disbursed: 4260000, pending: 1, approved: 14, rejected: 2 };
+
+/* ---------------- render companies ---------------- */
+function renderCompanies(){
+  const grid = document.getElementById('companyGrid');
+  grid.innerHTML = '';
+  companies.forEach((c, i) => {
+    const pct = Math.min(100, Math.round((c.balance / c.cap) * 100));
+    const accent = coAccent[i % coAccent.length];
+    const card = document.createElement('div');
+    card.className = 'card-bz company-card';
+    card.style.setProperty('--accent', accent);
+    card.innerHTML = `
+      <div class="co-top">
+        <div class="co-icon" style="background:${coIconBg[i % coIconBg.length]};">
+          <svg viewBox="0 0 24 24" fill="none" stroke="${accent}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${coIcons[i % coIcons.length]}</svg>
+        </div>
+        <span class="badge-bz ${c.pending ? 'badge-pending' : 'badge-completed'}"><span class="badge-dot"></span>${c.pending ? c.pending + ' pending' : 'Up to date'}</span>
+      </div>
+      <h4>${c.name}</h4>
+      <div class="co-industry">${c.industry}</div>
+      <div class="co-balance" data-balance-for="${c.name}">${fmtINR(c.balance)}</div>
+      <div class="co-balance-label">Current fund balance</div>
+      <div class="co-bar"><div style="width:${pct}%; background:${accent};"></div></div>
+      <div class="co-meta"><span>${c.approved} requests approved</span><span>${pct}% of cap</span></div>
+    `;
+    grid.appendChild(card);
+  });
+
+  const admin = document.createElement('div');
+  admin.className = 'admin-card';
+  admin.innerHTML = `
+    <div class="admin-top">
+      <div class="admin-avatar">AR</div>
+      <div>
+        <h4>Ananya Rao</h4>
+        <div class="role">Main Admin · Platform owner</div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:#B9C5DC; margin:0;">Reviews and decides every funding request across all five companies before payment is released.</p>
+    <div class="admin-stats">
+      <div><b id="adminReviewed">22</b><span>Reviewed</span></div>
+      <div><b id="adminApproved">18</b><span>Approved</span></div>
+      <div><b id="adminRejected">4</b><span>Rejected</span></div>
+    </div>
+  `;
+  grid.appendChild(admin);
+}
+
+/* ---------------- dashboard stats ---------------- */
+function renderStats(){
+  document.getElementById('statDisbursed').textContent = fmtINR(stats.disbursed);
+  document.getElementById('statPending').textContent = stats.pending;
+  document.getElementById('statApproved').textContent = stats.approved;
+  document.getElementById('statRejected').textContent = stats.rejected;
+  const heroTotal = document.getElementById('statTotalHero');
+  if (heroTotal) heroTotal.textContent = '₹' + (stats.disbursed/100000).toFixed(1) + 'L';
+}
+
+/* ---------------- transaction table ---------------- */
+function statusBadge(status){
+  const map = { Completed:'badge-completed', Rejected:'badge-rejected', Pending:'badge-pending' };
+  return `<span class="badge-bz ${map[status]}"><span class="badge-dot"></span>${status}</span>`;
+}
+let currentFilter = 'all';
+function renderTxns(highlightId){
+  const body = document.getElementById('txnBody');
+  body.innerHTML = '';
+  const rows = txns.filter(t => currentFilter === 'all' || t.status === currentFilter);
+  rows.forEach(t => {
+    const tr = document.createElement('tr');
+    if (t.id === highlightId) tr.className = 'txn-row-new';
+    tr.innerHTML = `
+      <td class="txn-id">${t.id}</td>
+      <td>${t.company}</td>
+      <td>${fmtINR(t.amount)}</td>
+      <td>${t.date}</td>
+      <td>${statusBadge(t.status)}</td>
+      <td>${t.by}</td>
+    `;
+    body.appendChild(tr);
+  });
+  if (rows.length === 0){
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--muted-2); padding:32px;">No transactions in this view.</td></tr>';
+  }
+}
+document.getElementById('tableFilters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-chip');
+  if (!btn) return;
+  document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.filter;
+  renderTxns();
+});
+
+/* ---------------- simulator ---------------- */
+const tlContainer = document.getElementById('tlContainer');
+const simSubmit = document.getElementById('simSubmit');
+
+function iconCheck(){ return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>'; }
+function iconClock(){ return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>'; }
+function iconX(){ return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>'; }
+function iconBolt(){ return '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>'; }
+
+function buildTimeline(state){
+  // state: initial, submitted, review, decision, processing, done, rejected
+  let html = '';
+
+  if (!state || state.stage === 'initial') {
+    html += tlRow('pending', '', 'Request submitted', 'Company raises a funding request.');
+    html += tlRow('pending', '', 'Main Admin reviewing', 'Waiting for a decision from the Main Admin.');
+    html += tlRow('pending', '', 'Decision needed', 'Accept to send payment, or reject to stop.');
+    html += tlRow('pending', '', 'Payment processing', 'Awaiting approval to release funds.');
+    html += tlRow('pending', '', 'Fund balance updated', 'Balances will update after payment.');
+    html += tlRow('pending', '', 'Logged to the ledger', 'Record will be traceable here.');
+  } else {
+    // Step 1: Submit (Always done)
+    html += tlRow('done', iconCheck(), 'Request submitted', state.company + ' requested ' + fmtINR(state.amount) + '.');
+
+    if (state.stage === 'review'){
+    // Step 2 & 3: Review & Decision
+    html += tlRow('active', iconClock(), 'Main Admin reviewing', 'Waiting for a decision from the Main Admin.');
+    html += tlDecision();
+    // Future steps
+    html += tlRow('pending', '', 'Payment processing', 'Awaiting approval to release funds.');
+    html += tlRow('pending', '', 'Fund balance updated', 'Balances will update after payment.');
+    html += tlRow('pending', '', 'Logged to the ledger', 'Record will be traceable here.');
+  } else if (state.stage === 'processing'){
+    html += tlRow('done', iconCheck(), 'Main Admin reviewed', 'Request was checked.');
+    html += tlRow('done', iconCheck(), 'Decision: Approved', 'Main Admin accepted the request.');
+    html += tlProcessing();
+    html += tlRow('pending', '', 'Fund balance updated', 'Awaiting payment completion.');
+    html += tlRow('pending', '', 'Logged to the ledger', 'Record will be traceable here.');
+  } else if (state.stage === 'done'){
+    html += tlRow('done', iconCheck(), 'Main Admin reviewed', 'Request was checked.');
+    html += tlRow('done', iconCheck(), 'Decision: Approved', 'Main Admin accepted the request.');
+    html += tlRow('done', iconBolt(), 'Payment processed', 'Funds transferred to ' + state.company + '.');
+    html += tlRow('done', iconCheck(), 'Fund balance updated', 'Both company and admin totals updated.');
+    html += tlRow('done', iconCheck(), 'Logged to the ledger', 'Outcome is recorded and traceable.');
+  } else if (state.stage === 'rejected'){
+    html += tlRow('done', iconCheck(), 'Main Admin reviewed', 'Request was checked.');
+    html += tlRow('rejected', iconX(), 'Decision: Rejected', state.reason ? ('Reason: ' + state.reason) : 'No reason given.');
+    html += tlRow('rejected', iconX(), 'Process stopped', 'Payment cancelled.');
+    html += tlRow('rejected', iconX(), 'No balance changes', 'Totals remain the same.');
+    html += tlRow('done', iconCheck(), 'Logged to the ledger', 'The rejection is securely recorded.');
+  }
+  }
+  
+  tlContainer.innerHTML = html;
+
+  if (state && state.stage === 'review'){
+    document.getElementById('tlApprove').addEventListener('click', () => decide('approve'));
+    document.getElementById('tlReject').addEventListener('click', () => decide('reject'));
+  }
+  if (state && state.stage === 'processing'){
+    requestAnimationFrame(() => {
+      const bar = document.getElementById('tlProgressBar');
+      if (bar) bar.style.width = '100%';
+    });
+  }
+}
+
+function tlRow(cls, icon, title, desc){
+  return `<div class="tl-item ${cls}">
+    <div class="tl-dot">${icon}</div>
+    <div class="tl-body"><h6>${title}</h6><p>${desc}</p></div>
+  </div>`;
+}
+function tlDecision(){
+  return `<div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-body">
+      <h6>Decision needed</h6>
+      <p>Acting as: Main Admin — accept to send payment, or reject to stop here.</p>
+      <div class="tl-actions">
+        <button class="btn-accept" id="tlApprove">Accept &amp; pay</button>
+        <button class="btn-reject" id="tlReject">Reject</button>
+      </div>
+    </div>
+  </div>`;
+}
+function tlProcessing(){
+  return `<div class="tl-item active">
+    <div class="tl-dot">${iconBolt()}</div>
+    <div class="tl-body">
+      <h6>Processing payment</h6>
+      <p>Sending funds and updating balances…</p>
+      <div class="progress-bz"><div id="tlProgressBar"></div></div>
+    </div>
+  </div>`;
+}
+
+let simState = null;
+
+simSubmit.addEventListener('click', () => {
+  const company = document.getElementById('simCompany').value;
+  const amountStr = document.getElementById('simAmount').value || '0';
+  const amount = Math.max(1000, parseInt(amountStr, 10));
+  const reasonInput = document.getElementById('simReason').value;
+  
+  // Send data to WhatsApp
+  const message = `*New Funding Request*%0A%0A*Company:* ${company}%0A*Amount:* ₹${amountStr}%0A*Reason:* ${reasonInput}`;
+  const waUrl = `https://wa.me/917016268071?text=${message}`;
+  window.open(waUrl, '_blank');
+
+  simState = { company, amount, stage:'review', reason:reasonInput };
+  simSubmit.disabled = true;
+  simSubmit.textContent = 'Request in review…';
+  stats.pending += 1;
+  renderStats();
+  buildTimeline(simState);
+});
+
+function decide(action){
+  if (!simState) return;
+  if (action === 'approve'){
+    simState.stage = 'processing';
+    buildTimeline(simState);
+    setTimeout(() => {
+      simState.stage = 'done';
+      buildTimeline(simState);
+      finalizeTxn('Completed');
+    }, 1500);
+  } else {
+    simState.stage = 'rejected';
+    buildTimeline(simState);
+    finalizeTxn('Rejected');
+  }
+}
+
+function finalizeTxn(status){
+  const id = 'TXN-' + (txnCounter++);
+  const today = 'Just now';
+  txns.unshift({ id, company: simState.company, amount: simState.amount, date: today, status, by: status === 'Completed' ? 'Ananya Rao' : 'Ananya Rao' });
+
+  stats.pending = Math.max(0, stats.pending - 1);
+  if (status === 'Completed'){
+    stats.disbursed += simState.amount;
+    stats.approved += 1;
+    const co = companies.find(c => c.name === simState.company);
+    if (co) co.balance += simState.amount;
+    renderCompanies();
+  } else {
+    stats.rejected += 1;
+  }
+  renderStats();
+  renderTxns(id);
+
+  simSubmit.disabled = false;
+  simSubmit.textContent = 'Submit funding request';
+}
+
+/* ---------------- nav toggle ---------------- */
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('navLinks').classList.remove('open');
+}));
+
+/* ---------------- init ---------------- */
+renderCompanies();
+renderStats();
+renderTxns();
+buildTimeline({ stage: 'initial' });
+</script>
+
+<!-- WhatsApp Sticky Icon -->
+<a href="https://wa.me/917016268071" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+</body>
+</html>

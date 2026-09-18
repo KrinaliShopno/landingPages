@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackMySales | Enterprise Field Tracking</title>
+    <link rel="icon" href="images/favicon.png?v=2" type="image/png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="TrackMySales Logo" style="height: 60px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto fw-medium" style="font-size: 0.9rem;">
+                    <li class="nav-item"><a class="nav-link px-3" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="btn btn-primary  fw-bold px-4 py-2"
+                        style="border-radius: 6px; font-size: 0.9rem;">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section  pb-5"
+        style="background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%); border-bottom: 1px solid #f8ece8;">
+        <div class="container position-relative pt-4">
+            <div class="row align-items-center g-5 mb-5 pb-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="badge bg-primary-subtle text-primary border border-primary px-3 py-2 rounded-pill fw-bold mb-4"
+                        style="font-size: 0.75rem; letter-spacing: 1px;">
+                        <i class="fa-solid fa-bolt me-1"></i> FIELD SALES MANAGEMENT SOFTWARE
+                    </div>
+                    <h1 class="display-4 fw-bold mb-4 text-dark" style="line-height: 1.1; letter-spacing: -1.5px;">
+                        Run your field sales<br>with <span class="text-primary">master precision.</span>
+                    </h1>
+                    <p class="fs-5 text-muted mb-5 pe-lg-5" style="line-height: 1.6;">
+                        You have the products, we provide the field salesmen. Our software logs their attendance, live
+                        GPS routes, and automates daily reports so you can scale effortlessly.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                        <a href="#pricing" class="btn btn-primary btn-lg px-4 py-3 fw-bold"
+                            style="border-radius: 6px; font-size: 1rem;"><i class="fa-solid fa-rocket me-2"></i> Start
+                            14-Day Free Trial</a>
+                        <a href="#contact" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold bg-white"
+                            style="border-radius: 6px; font-size: 1rem;"><i
+                                class="fa-regular fa-calendar-check me-2"></i> Book Free Demo</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-4">
+                        <div class="text-warning fs-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="fw-bold ms-2 text-dark fs-6">4.9/5</span>
+                        <span class="text-muted small ms-1 fw-medium">from 2,500+ Sales Managers across India.</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="position-relative text-end">
+                        <img src="images/hero_banner.png" alt="TrackMySales Dashboard"
+                            class="img-fluid rounded-4 shadow-lg w-100" style="max-width: 90%;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="row g-4 mt-1 justify-content-center stats-row position-relative z-index-2">
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-3 p-4 text-center stat-card shadow-lg position-relative overflow-hidden"
+                        style="border-radius: 16px !important; border-bottom: 4px solid var(--bs-primary) !important;">
+                        <h2 class="fw-bold mb-1 text-dark" style="font-weight: 800 !important;">10,000+</h2>
+                        <p class="text-muted small mb-0" style="letter-spacing: 0.5px; font-size: 0.75rem;">Active
+                            Salesmen</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-3 p-4 text-center stat-card shadow-lg position-relative overflow-hidden"
+                        style="border-radius: 16px !important; border-bottom: 4px solid var(--bs-primary) !important;">
+                        <h2 class="fw-bold mb-1 text-dark" style="font-weight: 800 !important;">20,000+</h2>
+                        <p class="text-muted small mb-0" style="letter-spacing: 0.5px; font-size: 0.75rem;">Client
+                            Visits Logged</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-3 p-4 text-center stat-card shadow-lg position-relative overflow-hidden"
+                        style="border-radius: 16px !important; border-bottom: 4px solid var(--bs-primary) !important;">
+                        <h2 class="fw-bold mb-1 text-dark" style="font-weight: 800 !important;">99.2%</h2>
+                        <p class="text-muted small mb-0" style="letter-spacing: 0.5px; font-size: 0.75rem;">Uptime
+                            Guarantee</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white rounded-3 p-4 text-center stat-card shadow-lg position-relative overflow-hidden"
+                        style="border-radius: 16px !important; border-bottom: 4px solid var(--bs-primary) !important;">
+                        <h2 class="fw-bold mb-1 text-dark" style="font-weight: 800 !important;">4 Min</h2>
+                        <p class="text-muted small mb-0" style="letter-spacing: 0.5px; font-size: 0.75rem;">Average
+                            Setup Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- WORKFLOW PILLS SECTION -->
+    <section class=" pt-4 position-relative overflow-hidden" style="background: #ffffff;">
+        <div class="container position-relative z-index-1 mt-3">
+            <div class="text-center mb-4">
+                <span
+                    class="badge bg-primary-subtle text-primary border border-primary px-3 py-2 rounded-pill fw-bold"
+                    style="font-size: 0.75rem; letter-spacing: 1px;">STREAMLINE YOUR WORKFLOW</span>
+            </div>
+
+            <div class="position-relative max-w-900 mx-auto workflow-pills-container">
+                <!-- Dashed Line Background -->
+                <!-- <div class="position-absolute top-100 start-0 w-100 border-top border-2 border-primary"
+                    style="border-style: dashed !important; opacity: 0.15; z-index: 0; transform: translateY(-50%);">
+                </div> -->
+
+                <div class="d-flex flex-column align-items-center gap-3 position-relative z-index-1">
+                    <!-- Row 1 -->
+                    <div class="d-flex justify-content-center flex-wrap gap-3 w-100">
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Live Location Tracking</span>
+                        </div>
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Automated Attendance</span>
+                        </div>
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Daily Expense Reports</span>
+                        </div>
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Target Tracking</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="d-flex justify-content-center flex-wrap gap-3 w-100">
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">WhatsApp Integration</span>
+                        </div>
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Route Optimization</span>
+                        </div>
+                        <div
+                            class="tailor-pill d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                            <div class="tailor-pill-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                                style="width: 20px; height: 20px; font-size: 0.6rem;"><i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="fw-bold text-dark" style="font-size: 0.85rem;">Real-time Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE FEATURES GRID -->
+    <section id="features" class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center max-w-700 mx-auto " data-aos="fade-up">
+                <span
+                    class="badge bg-primary-subtle text-primary border border-primary px-3 py-2 rounded-pill fw-bold mb-3"
+                    style="font-size: 0.75rem; letter-spacing: 1px;">EVERYTHING IN ONE PLACE</span>
+                <h2 class="fw-bold display-5 mb-3 text-dark" style="letter-spacing: -1px;">Every tool you need to take
+                    control of your field force</h2>
+                <p class="fs-5 text-muted">From real-time tracking to automated WhatsApp updates, our comprehensive
+                    suite keeps your sales operations running perfectly.</p>
+            </div>
+
+            <div class="row g-4 mt-3">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-solid fa-location-crosshairs fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Live Geo-Tracking</h5>
+                        <p class="text-muted mb-0 small">Monitor your field executives in real-time. Optimize routes and
+                            automatically log client visits using precise GPS intelligence.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-solid fa-chart-line fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Real-time Dashboard</h5>
+                        <p class="text-muted mb-0 small">Gain actionable insights with visual reports. Track conversion
+                            rates, monthly targets, and individual agent performance instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-brands fa-whatsapp fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Automated WhatsApp</h5>
+                        <p class="text-muted mb-0 small">Set your client communication on autopilot. Send automated
+                            updates, meeting reminders, and follow-ups via WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-solid fa-file-invoice-dollar fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Expenses & Claims</h5>
+                        <p class="text-muted mb-0 small">Allow field reps to snap photos of receipts and submit daily
+                            travel allowances directly through the mobile app for fast approval.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-solid fa-users-gear fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Lead Management</h5>
+                        <p class="text-muted mb-0 small">Capture leads on the go. Automatically assign leads to nearby
+                            agents based on territory mapping and current availability.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-white  rounded-4 p-4 h-100 shadow-sm feature-card-clean">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3 mb-4"
+                            style="width: 48px; height: 48px;">
+                            <i class="fa-solid fa-fingerprint fs-5"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 text-dark">Biometric Attendance</h5>
+                        <p class="text-muted mb-0 small">Ensure 100% accurate attendance with geo-fenced selfie
+                            check-ins and check-outs right from the field.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class=" bg-white">
+        <div class="container pt-4">
+            <!-- Headers -->
+            <div class="text-center  mx-auto mb-5 pb-3" data-aos="fade-up">
+                <span class="badge px-3 py-2 rounded-pill fw-bold mb-4"
+                    style="font-size: 0.75rem; letter-spacing: 1px; border: 1px dashed rgba(255, 122, 69, 0.4); background-color: rgba(255, 122, 69, 0.05); color: var(--bs-primary);">TRANSPARENT
+                    PRICING</span>
+                <h2 class="fw-bold display-5 mb-3 text-dark" style="letter-spacing: -1px;">One Price, All-In-One
+                    Solution</h2>
+                <p class="fs-5 text-muted mb-4 px-lg-5" style="line-height: 1.6;">Get the Field Agent App, Manager
+                    Portal & Web Dashboard—all in one plan. Choose One-Time And Yearly Pricing.<br>No hidden charges,
+                    full features included.</p>
+            </div>
+
+            <!-- Card -->
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12">
+                    <div class="bg-white rounded-4 p-4 p-md-5 position-relative shadow mt-4"
+                        style="border: 2px solid var(--bs-primary);">
+
+                        <!-- Floating Top Badge -->
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-primary text-white px-4 py-2 rounded-pill fw-bold shadow-sm"
+                                style="font-size: 0.85rem; letter-spacing: 0.5px;">MOST POPULAR CHOICE</span>
+                        </div>
+
+                        <!-- Card Header -->
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-2 mt-2 gap-3">
+                            <div>
+                                <h3 class="text-dark fw-bold mb-1 fs-3">TrackMySales All-In-One Plan</h3>
+                                <p class="text-muted mb-0 fs-6">Complete operating system for modern field sales teams
+                                </p>
+                            </div>
+                            <div>
+                                <span class="badge rounded-pill fw-bold px-3 py-2 d-inline-flex align-items-center"
+                                    style="background-color: rgba(255, 122, 69, 0.1); color: var(--bs-primary); border: 1px solid rgba(255, 122, 69, 0.3);"><i
+                                        class="fa-solid fa-shield-check me-2"></i> Full Access</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" style="border-color: #e2e8f0; opacity: 1;">
+
+                        <!-- Pricing Boxes -->
+                        <div class="row g-4 mb-5">
+                            <!-- Box 1 (Grey bg) -->
+                            <div class="col-md-6">
+                                <div class="rounded-3 p-4 h-100 border" style="background-color: #f8fafc;">
+                                    <h2 class="fw-bold text-dark mb-1">₹9,999 <span
+                                            class="fs-6 text-muted fw-medium ms-1">One-Time</span></h2>
+                                    <p class="text-muted mb-0 fs-6">Onboarding & Setup Charges</p>
+                                </div>
+                            </div>
+                            <!-- Box 2 (White bg, colored border) -->
+                            <div class="col-md-6">
+                                <div class="bg-white rounded-3 p-4 h-100"
+                                    style="border: 1px solid rgba(255, 122, 69, 0.3);">
+                                    <h2 class="fw-bold mb-1" style="color: var(--bs-primary);">₹3,500 <span
+                                            class="fs-6 text-muted fw-medium ms-1">/year</span></h2>
+                                    <p class="text-muted mb-0 fs-6">Annual Subscription Charges (ASC)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="mb-4">
+                            <p class="text-dark fw-bold mb-4" style="font-size: 1rem;">Features Included :</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-circle-check fs-5 me-3" style="color: #10b981;"></i>
+                                        <span class="text-dark fs-6 fw-medium">Full Access to all Tracking
+                                            Features</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-circle-check fs-5 me-3" style="color: #10b981;"></i>
+                                        <span class="text-dark fs-6 fw-medium">Easy to Use Field Sales Mobile App</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-circle-check fs-5 me-3" style="color: #10b981;"></i>
+                                        <span class="text-dark fs-6 fw-medium">Automated WhatsApp Alerts</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fa-regular fa-circle-check fs-5 me-3" style="color: #10b981;"></i>
+                                        <span class="text-dark fs-6 fw-medium">Regular Updates & Customer Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="#contact" class="btn w-100 py-3 mt-3 shadow-sm text-white"
+                            style="background-color: var(--bs-primary); border-radius: 8px; font-weight: 600; font-size: 1.1rem;"><i
+                                class="fa-solid fa-bolt me-2"></i> Start Your Free 14-Day Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center max-w-700 mx-auto mb-5 pb-3" data-aos="fade-up">
+                <span
+                    class="badge bg-primary-subtle text-primary border border-primary px-3 py-2 rounded-pill fw-bold mb-3">TESTIMONIALS</span>
+                <h2 class="fw-bold display-5 mb-3">Trusted by Master Sales Managers Across India</h2>
+                <p class="lead text-muted">Join over 5,000 businesses that use TrackMySales to transform their field
+                    operations.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card d-flex flex-column">
+                        <div class="mb-3" style="color: #f59e0b; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="fst-italic text-muted mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.7;">"TrackMySales has revolutionized how we manage
+                            our field reps. We've seen a 40% increase in client visits and our expense reporting is
+                            finally under control. Highly recommended!"</p>
+                        <div class="d-flex align-items-center mt-auto border-top pt-4">
+                            <div class="testimonial-avatar me-3 fw-bold shadow-sm" style="background-color: #ff7a45; color: #000;">RP</div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #1e293b; font-size: 0.95rem;">Rajesh Patel</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">Sales Director, FinServe India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card d-flex flex-column">
+                        <div class="mb-3" style="color: #f59e0b; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="fst-italic text-muted mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.7;">"The real-time dashboard is a game-changer. I
+                            can instantly see where my entire team is and step in if someone needs help closing a deal.
+                            The WhatsApp automation saves us hours daily."</p>
+                        <div class="d-flex align-items-center mt-auto border-top pt-4">
+                            <div class="testimonial-avatar me-3 fw-bold shadow-sm" style="background-color: #0f172a; color: #fff;">SM</div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #1e293b; font-size: 0.95rem;">Sneha Mehta</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">Regional Head, BuildMart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card d-flex flex-column">
+                        <div class="mb-3" style="color: #f59e0b; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="fst-italic text-muted mb-4 flex-grow-1" style="font-size: 0.95rem; line-height: 1.7;">"Our previous tracking app drained battery and
+                            crashed often. TrackMySales is incredibly stable, and the field agents actually love using
+                            it because the UI is so simple and fast."</p>
+                        <div class="d-flex align-items-center mt-auto border-top pt-4">
+                            <div class="testimonial-avatar me-3 fw-bold shadow-sm" style="background-color: #10b981; color: #000;">AK</div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #1e293b; font-size: 0.95rem;">Amit Kumar</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">Operations Manager, HealthCare Plus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FORM SECTION -->
+    <section id="contact" class=" bg-light pb-5 ">
+        <div class="container pb-5">
+            <div class="row g-0 align-items-center rounded-4 shadow-lg position-relative overflow-hidden"
+                data-aos="zoom-in" style="background: linear-gradient(to right, #0f172a 100%);">
+
+                <div class="col-lg-6 p-5 position-relative z-index-1">
+                    <div class="ps-lg-3 pe-lg-4">
+                        <span class="badge mb-4 px-3 py-2 rounded-pill fw-bold"
+                            style="background-color: #fbbf24; color: #000; font-size: 0.75rem; letter-spacing: 0.5px;">LIMITED
+                            TIME OFFER</span>
+                        <h2 class="display-6 fw-bold mb-4 text-white" style="letter-spacing: -1px; line-height: 1.2;">
+                            Transform Your Field Sales Business Today</h2>
+                        <p class="fs-6 mb-4" style="color: rgba(255, 255, 255, 0.9); line-height: 1.6;">Join 5,000+
+                            businesses and focus on scaling your revenue while we automate your field tracking,
+                            reporting, and expenses. No credit card required.</p>
+
+                        <!-- Horizontal Checklist -->
+                        <div class="d-flex flex-wrap align-items-center gap-3 fs-6">
+                            <div class="d-flex align-items-center fw-medium small">
+                                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2"
+                                    style="width: 18px; height: 18px; font-size: 0.6rem;"><i
+                                        class="fa-solid fa-check"></i></div>
+                                <span class="text-white">Setup in 4 minutes</span>
+                            </div>
+                            <div class="d-flex align-items-center fw-medium small">
+                                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2"
+                                    style="width: 18px; height: 18px; font-size: 0.6rem;"><i
+                                        class="fa-solid fa-check"></i></div>
+                                <span class="text-white">Free setup assistance</span>
+                            </div>
+                            <div class="d-flex align-items-center fw-medium small mt-lg-2 mt-xl-0">
+                                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2"
+                                    style="width: 18px; height: 18px; font-size: 0.6rem;"><i
+                                        class="fa-solid fa-check"></i></div>
+                                <span class="text-white">Dedicated phone support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 p-4 p-lg-5 position-relative z-index-1">
+                    <div class="bg-white rounded-4 p-4 shadow-lg text-dark mx-lg-3">
+                        <h4 class="fw-bold mb-4 text-dark fs-5">Get Started with TrackMySales</h4>
+                        <form id="trackMySalesForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold" style="color: #475569; font-size: 0.75rem;">Your
+                                    Full Name</label>
+                                <input type="text" id="waName" class="form-control bg-white border rounded-3 px-3 py-2"
+                                    style="border-color: #e2e8f0; font-size: 0.9rem;" placeholder="e.g. Rahul Sharma">
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold"
+                                        style="color: #475569; font-size: 0.75rem;">WhatsApp Phone Number</label>
+                                    <input type="tel" id="waPhone" class="form-control bg-white border rounded-3 px-3 py-2"
+                                        style="border-color: #e2e8f0; font-size: 0.9rem;" placeholder="9876543210" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold"
+                                        style="color: #475569; font-size: 0.75rem;">Company Name</label>
+                                    <input type="text" id="waCompany" class="form-control bg-white border rounded-3 px-3 py-2"
+                                        style="border-color: #e2e8f0; font-size: 0.9rem;"
+                                        placeholder="e.g. Sales India">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold" style="color: #475569; font-size: 0.75rem;">City
+                                    / Location</label>
+                                <input type="text" id="waCity" class="form-control bg-white border rounded-3 px-3 py-2"
+                                    style="border-color: #e2e8f0; font-size: 0.9rem;"
+                                    placeholder="e.g. Ahmedabad, Mumbai, Jaipur">
+                            </div>
+                            <button type="button" onclick="sendWhatsAppMessage()" class="btn w-100 fw-bold rounded-3 py-3"
+                                style="background-color: #0f172a; color: white; font-size: 0.95rem;">Contact Us</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-light py-5 footer-gradient-border">
+        <div class="container pt-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+                        <img src="images/logo.png" alt="TrackMySales Logo" style="height: 60px; object-fit: contain;">
+                    </a>
+                    <p class="text-muted pe-lg-4 mt-3">The ultimate enterprise suite for tracking field teams, managing
+                        operations, and automating business processes.</p>
+                 
+                                <!-- Built By Badge in Box -->
+                    <div class="d-flex align-items-center p-3 rounded-3 border bg-white shadow-sm mt-3"
+                        style="border-color: #e2e8f0 !important;">
+                        <div class="bg-primary text-white d-flex justify-content-center align-items-center rounded-3 me-3"
+                            style="width: 48px; height: 48px; font-weight: bold; font-size: 1.5rem;">
+                            D
+                        </div>
+                        <div>
+                            <p class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">Built & maintained
+                                by</p>
+                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 1.1rem;">Digitalks Techno LLP</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Products</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#features"
+                                class="text-muted text-decoration-none hover-primary">Feature</a></li>
+                        <li class="mb-2"><a href="#pricing"
+                                class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+                        <li class="mb-2"><a href="#testimonials"
+                                class="text-muted text-decoration-none hover-primary">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact"
+                                class="text-muted text-decoration-none hover-primary">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="https://digitalkstechno.com/about-us"
+                                class="text-muted text-decoration-none hover-primary">About Us</a>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/ourproducts"
+                                class="text-muted text-decoration-none hover-primary">Our Products
+                            </a></li>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/contact-us"
+                                class="text-muted text-decoration-none hover-primary">Contact Us</a></li>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/career"
+                                class="text-muted text-decoration-none hover-primary">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Contact & Support</h6>
+                    <ul class="list-unstyled text-muted mb-4 mt-2">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-envelope me-3 text-primary fs-5"></i>
+                            <a href="mailto:info@digitalkstechno.com"
+                                class="text-muted text-decoration-none fs-6 hover-primary">info@digitalkstechno.com</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone me-3 text-primary fs-5"></i>
+                            <a href="tel:+917016268071" class="text-muted text-decoration-none fs-6 hover-primary">+91
+                                70162 68071</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone me-3 text-primary fs-5"></i>
+                            <a href="tel:+918866779008" class="text-muted text-decoration-none fs-6 hover-primary">+91
+                                88667 79008</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fa-solid fa-location-dot me-3 text-primary fs-5 mt-1"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=2nd+floor,+C1,+above+Adarsh+Farsan+Mart,+Baroda+Prestige,+Ganesh+Colony,+Varachha,+Surat,+Gujarat+395010"
+                                target="_blank" class="text-muted text-decoration-none fs-6 hover-primary"
+                                style="line-height: 1.6;">2nd floor, C1, above Adarsh Farsan Mart, Baroda Prestige,
+                                Ganesh Colony, Varachha, Surat, Gujarat 395010</a>
+                        </li>
+                    </ul>
+   <div class="d-flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/DigiTalksTechnoLLP"
+                            class="btn btn-outline-secondary rounded-circle"
+                            style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/digitalks_techno_llp/"
+                            class="btn btn-outline-secondary rounded-circle"
+                            style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/105383945"
+                            class="btn btn-outline-secondary rounded-circle"
+                            style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@DigiTalks_Techno_LLP"
+                            class="btn btn-outline-secondary rounded-circle"
+                            style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="border-top pt-4 text-center">
+                <p class="text-muted small mb-0 fs-5">&copy; 2026 TrackMySales Inc. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917016268071" class="whatsapp-float shadow-lg" target="_blank" rel="noopener noreferrer"
+        title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
