@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaSoft - Advanced Medicine Store & Pharmacy Management System</title>
+    <meta name="description" content="PharmaSoft is a complete pharmacy management system covering medicine sales, inventory, GST, customer, and doctor management.">
+    <link rel="icon" href="images/favicon.png?v=2" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navContent" data-bs-offset="120" tabindex="0">
+
+    <!-- Header / Nav -->
+    <header class="site-header fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="PharmaSoft Logo" height="40">
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#workflow">Workflow</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#preview">Dashboard</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#contact" class="btn btn-primary rounded-pill px-4">Get Started</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Split 2-Column Professional SaaS Style) -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="badge-soft mb-3">
+                        <span class="badge-dot"></span> Next-Gen Pharmacy ERP
+                    </div>
+                    <h1 class="hero-title mb-4">
+                        Modernize Your Pharmacy with <span class="text-primary-gradient">PharmaSoft</span>
+                    </h1>
+                    <p class="hero-subtitle mb-4">
+                        The complete Medicine Store & Pharmacy Management System. Manage billing, stock inventory, GST compliance, and customer insights in one unified dashboard.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3 mb-5">
+                        <a href="#contact" class="btn btn-primary rounded-pill px-4 py-3 fw-semibold">
+                            Explore Features <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#preview" class="btn btn-outline-secondary rounded-pill px-4 py-3 fw-semibold play-btn">
+                            <i class="fas fa-circle-play text-primary me-2"></i> Watch Demo
+                        </a>
+                    </div>
+                    <div class="hero-stats d-flex gap-4 pt-3 border-top">
+                        <div>
+                            <h4 class="fw-bold mb-0">10k+</h4>
+                            <small class="text-muted">Active Pharmacies</small>
+                        </div>
+                        <div class="vr"></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">99.9%</h4>
+                            <small class="text-muted">Uptime Guarantee</small>
+                        </div>
+                        <div class="vr"></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">Instant</h4>
+                            <small class="text-muted">GST E-Invoicing</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-mockup-wrapper position-relative">
+                        <div class="mockup-card p-2 rounded-4 shadow-xl bg-white border">
+                            <img src="images/hero.png" alt="PharmaSoft Modern Interface" class="img-fluid rounded-3">
+                        </div>
+                        <div class="floating-badge sales-badge d-flex align-items-center gap-3 p-3 rounded-3 shadow-lg bg-white">
+                            <div class="badge-icon bg-success-subtle text-success"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <small class="text-muted d-block">Today's Sales</small>
+                                <strong>₹48,920.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Dark Neon Bento Grid) -->
+    <section class="py-6 feature-dark-section" id="features">
+        <div class="container">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="sub-heading text-primary-light">CORE FEATURES</span>
+                <h2 class="section-title mt-2 text-white">Everything you need to run your pharmacy</h2>
+                <p class="text-white-50">A comprehensive suite of tools built specifically for retail pharmacies, wholesalers, and medical stores.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Large Bento Item -->
+                <div class="col-lg-8">
+                    <div class="feature-box-dark bento-large h-100 position-relative overflow-hidden">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-7 position-relative z-1">
+                                <div class="icon-circle-dark icon-neon-blue"><i class="fas fa-pills"></i></div>
+                                <h4 class="fw-bold mb-3 text-white">Medicine Sales & Fast POS</h4>
+                                <p class="text-white-50 mb-0">Experience lightning-fast counter billing with barcode scanning, batch tracking, and direct prescription uploads. Built to handle rush hours effortlessly.</p>
+                            </div>
+                            <div class="col-md-5 text-end d-none d-md-block">
+                                <i class="fas fa-cash-register fa-6x text-primary opacity-25" style="transform: rotate(-10deg);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Standard Item -->
+                <div class="col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-teal"><i class="fas fa-boxes-stacked"></i></div>
+                        <h5 class="fw-bold text-white">Inventory Control</h5>
+                        <p class="text-white-50 small mb-0">Automatic low-stock warnings, batch expiry tracking, and purchase order sync.</p>
+                    </div>
+                </div>
+                
+                <!-- Row 2 (3 Items) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-amber"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h5 class="fw-bold text-white">GST & Taxation</h5>
+                        <p class="text-white-50 small mb-0">Single-click GSTR-1 & GSTR-3B generation, HSN/SAC automated lookups.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-rose"><i class="fas fa-rotate-left"></i></div>
+                        <h5 class="fw-bold text-white">Returns Handling</h5>
+                        <p class="text-white-50 small mb-0">Instant customer returns and supplier expiry return debit note tracking.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-cyan"><i class="fas fa-credit-card"></i></div>
+                        <h5 class="fw-bold text-white">Payment Processing</h5>
+                        <p class="text-white-50 small mb-0">Accept UPI, cards, cash, split payments, and maintain ledger khata books.</p>
+                    </div>
+                </div>
+
+                <!-- Row 3 (3 Items) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-emerald"><i class="fas fa-users"></i></div>
+                        <h5 class="fw-bold text-white">Customer CRM</h5>
+                        <p class="text-white-50 small mb-0">Patient profile, refill reminders via SMS/WhatsApp, and loyalty reward points.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100">
+                        <div class="icon-circle-dark icon-neon-indigo"><i class="fas fa-user-doctor"></i></div>
+                        <h5 class="fw-bold text-white">Doctor Management</h5>
+                        <p class="text-white-50 small mb-0">Doctor database, prescription referral logs, and doctor-wise reporting.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box-dark h-100 position-relative overflow-hidden">
+                        <div class="icon-circle-dark icon-neon-violet"><i class="fas fa-chart-pie"></i></div>
+                        <h5 class="fw-bold text-white">Financial Tracking</h5>
+                        <p class="text-white-50 small mb-0">Real-time profit & loss, cash register, expense tracking, and ledgers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step by Step Workflow Section -->
+    <section class="py-6" id="workflow">
+        <div class="container">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="sub-heading">HOW IT WORKS</span>
+                <h2 class="section-title mt-2">Pharmacy User Workflow Details</h2>
+                <p class="text-muted">A seamless end-to-end journey designed to boost counter billing speed and zero inventory errors.</p>
+            </div>
+
+            <div class="workflow-path-container position-relative mt-4">
+                <!-- Connecting Lines -->
+                <div class="path-line path-line-top d-none d-lg-block"></div>
+                <div class="path-line path-line-bottom d-none d-lg-block"></div>
+
+                <div class="row g-4 g-lg-5 position-relative z-1">
+                    <!-- Top Row -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">01</div>
+                            <h5 class="fw-bold mt-4">Login & Setup</h5>
+                            <p class="text-muted small mb-0">Secure store profile</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">02</div>
+                            <h5 class="fw-bold mt-4">Purchase Entry</h5>
+                            <p class="text-muted small mb-0">Supplier bill import</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">03</div>
+                            <h5 class="fw-bold mt-4">Stock Control</h5>
+                            <p class="text-muted small mb-0">Batch & rack sorting</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">04</div>
+                            <h5 class="fw-bold mt-4">POS Billing</h5>
+                            <p class="text-muted small mb-0">Fast barcode counter</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Row -->
+                    <div class="col-sm-6 col-lg-3 mt-lg-5">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">05</div>
+                            <h5 class="fw-bold mt-4">Settlement</h5>
+                            <p class="text-muted small mb-0">Cash, UPI & card pay</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mt-lg-5">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">06</div>
+                            <h5 class="fw-bold mt-4">Handle Returns</h5>
+                            <p class="text-muted small mb-0">Customer & vendor</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mt-lg-5">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">07</div>
+                            <h5 class="fw-bold mt-4">CRM & Doctors</h5>
+                            <p class="text-muted small mb-0">Refills & referrals</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mt-lg-5">
+                        <div class="workflow-node text-center">
+                            <div class="node-circle">08</div>
+                            <h5 class="fw-bold mt-4">Audits & GST</h5>
+                            <p class="text-muted small mb-0">Automated reports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Pricing Section -->
+    <section class="py-6 bg-light" id="pricing">
+        <div class="container">
+            <div class="text-center mx-auto mb-5">
+                <span class="sub-heading">PRICING PLANS</span>
+                <h2 class="section-title mt-2">Simple, transparent pricing</h2>
+                <p class="text-muted">Choose the perfect plan for your pharmacy. No hidden fees or surprise charges.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="card shadow-lg rounded-4 position-relative" style="border: 2px solid var(--primary) !important;">
+                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-4 py-2 text-uppercase" style="font-size: 0.85rem; letter-spacing: 0.5px;">Most Popular Choice</div>
+                        <div class="card-body p-4 p-lg-5 mt-2">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-4 border-bottom gap-3">
+                                <div>
+                                    <h3 class="fw-bold mb-1 text-dark">PharmaSoft All-In-One Plan</h3>
+                                    <p class="text-muted mb-0">Complete operating system for modern retail pharmacies</p>
+                                </div>
+                                <div class="badge bg-primary-subtle text-primary rounded-pill px-4 py-2 border border-primary-subtle" style="font-size: 0.85rem;">Full Access</div>
+                            </div>
+                            
+                            <div class="row g-4 mb-5">
+                                <div class="col-md-6">
+                                    <div class="p-4 rounded-3 h-100 d-flex flex-column justify-content-center" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                        <div class="d-flex align-items-baseline gap-2 mb-2">
+                                            <h2 class="fw-bold text-dark mb-0">₹9,999</h2>
+                                            <span class="text-muted fw-medium">One-Time</span>
+                                        </div>
+                                        <p class="text-muted mb-0">Onboarding & Setup Charges</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4 rounded-3 h-100 d-flex flex-column justify-content-center" style="border: 1px solid var(--primary); background-color: #fff;">
+                                        <div class="d-flex align-items-baseline gap-2 mb-2">
+                                            <h2 class="fw-bold text-primary mb-0">₹3,500</h2>
+                                            <span class="text-muted fw-medium">/year</span>
+                                        </div>
+                                        <p class="text-muted mb-0">Annual Subscription Charges (ASC)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6 class="fw-bold text-dark mb-4">Features Included :</h6>
+                            <div class="row g-4 mb-5">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-4 d-flex align-items-center"><i class="fa-regular fa-circle-check text-success fs-5 me-3"></i> <span class="fw-medium text-dark" style="font-size: 0.95rem;">Full Access to all ERP Features</span></li>
+                                        <li class="mb-0 d-flex align-items-center"><i class="fa-regular fa-circle-check text-success fs-5 me-3"></i> <span class="fw-medium text-dark" style="font-size: 0.95rem;">Easy to Use POS Billing System</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-4 d-flex align-items-center"><i class="fa-regular fa-circle-check text-success fs-5 me-3"></i> <span class="fw-medium text-dark" style="font-size: 0.95rem;">Automated WhatsApp Alerts</span></li>
+                                        <li class="mb-0 d-flex align-items-center"><i class="fa-regular fa-circle-check text-success fs-5 me-3"></i> <span class="fw-medium text-dark" style="font-size: 0.95rem;">Regular Updates & Customer Support</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <a href="#contact" class="btn btn-primary btn-lg w-100 rounded-3 py-3 fw-bold fs-6">
+                                <i class="fas fa-bolt me-2"></i> Start Your Free 14-Day Trial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modern Dashboard Showcase (White Glass Canvas) -->
+    <section class="preview-canvas py-6 position-relative overflow-hidden" id="preview">
+        <!-- Abstract Background Shapes -->
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        
+        <div class="container position-relative z-1">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3">Live System</span>
+                <h2 class="display-6 fw-bold mb-3 text-dark">Intuitive Dashboard UI</h2>
+                <p class="text-muted">Clean, frictionless design tailored for fast counter service and detailed back-office analytics.</p>
+            </div>
+            
+            <div class="row align-items-center mt-5 pt-4">
+                <div class="col-lg-7">
+                    <div class="macbook-mockup">
+                        <div class="macbook-screen">
+                            <div class="macbook-camera"></div>
+                            <div class="macbook-display">
+                                <!-- Flat UI screenshot -->
+                                <img src="images/dashboard.jpg" alt="PharmaSoft Live Dashboard" class="img-fluid w-100">
+                                
+                                <!-- Overlaying the user's actual logo on the screen -->
+                                <div class="dashboard-logo-overlay">
+                                    <img src="images/logo.png" alt="PharmaSoft Logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="macbook-base">
+                            <div class="macbook-notch"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 ps-lg-5 mt-5 mt-lg-0">
+                    <div class="detail-card">
+                        <div class="d-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h5 class="fw-bold text-dark">Real-time Analytics</h5>
+                            <p class="text-muted small mb-0">Track daily sales, top products, and revenue streams instantly without refreshing.</p>
+                        </div>
+                    </div>
+                    <div class="detail-card mt-4">
+                        <div class="d-icon"><i class="fas fa-bell"></i></div>
+                        <div>
+                            <h5 class="fw-bold text-dark">Smart Alerts</h5>
+                            <p class="text-muted small mb-0">Get proactive notifications for expiring medicines and low stock levels.</p>
+                        </div>
+                    </div>
+                    <div class="detail-card mt-4">
+                        <div class="d-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div>
+                            <h5 class="fw-bold text-dark">1-Click Export</h5>
+                            <p class="text-muted small mb-0">Generate GST-ready reports (GSTR-1, 3B) directly from the dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Premium Dark Split CTA Section -->
+    <section class="py-6 mt-5 position-relative overflow-hidden" id="contact">
+        <!-- Abstract Background Glow -->
+        <div class="position-absolute top-50 start-0 translate-middle-y bg-primary opacity-10" style="width: 300px; height: 300px; filter: blur(100px); border-radius: 50%;"></div>
+        
+        <div class="container position-relative z-1">
+            <div class="rounded-5 overflow-hidden shadow-lg p-4 p-lg-5 position-relative" style="background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(255,255,255,0.08);">
+                <!-- Inner Glow for depth -->
+                <div class="position-absolute top-0 end-0 bg-primary opacity-20" style="width: 400px; height: 400px; filter: blur(80px); border-radius: 50%; transform: translate(30%, -30%);"></div>
+                
+                <div class="row align-items-center position-relative z-1">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4" style="background: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.3);">
+                            <span class="spinner-grow spinner-grow-sm text-warning" role="status" aria-hidden="true" style="width: 0.5rem; height: 0.5rem;"></span>
+                            <span class="text-warning fw-bold" style="font-size: 0.75rem; letter-spacing: 0.5px;">LIMITED TIME OFFER</span>
+                        </div>
+                        
+                        <h2 class="display-5 fw-bold mb-4 text-white lh-sm">
+                            Transform Your Pharmacy Business <span class="text-primary-light">Today</span>
+                        </h2>
+                        
+                        <p class="mb-5 fs-5 fw-light" style="color: #94a3b8; line-height: 1.6;">
+                            Join 5,000+ medical stores and focus on scaling your revenue while we automate your billing, inventory, and GST reporting. No credit card required.
+                        </p>
+                        
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-3 p-3 rounded-4 transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle" style="width: 42px; height: 42px; background: rgba(251, 191, 36, 0.2); color: #fbbf24;">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <span class="fw-medium text-white fs-6">Setup in 4 minutes</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 p-3 rounded-4 transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle" style="width: 42px; height: 42px; background: rgba(26, 132, 114, 0.2); color: #2dd4bf;">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <span class="fw-medium text-white fs-6">Free dedicated setup assistance</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Form Container -->
+                    <div class="col-lg-6 p-2 p-lg-4">
+                        <div class="bg-white rounded-5 p-4 p-lg-5 shadow-lg mx-lg-3 position-relative" style="border: 4px solid rgba(255,255,255,0.1); background-clip: padding-box;">
+                            <h4 class="fw-bold mb-4 text-dark fs-4">Get in Touch</h4>
+                            <form id="contactForm" onsubmit="submitToWhatsApp(event)">
+                                <div class="mb-3">
+                                    <input type="text" id="waName" class="form-control shadow-none custom-form-input" placeholder="Your Full Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" id="waPhone" class="form-control shadow-none custom-form-input" placeholder="Phone Number" pattern="[0-9]{10,12}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                                </div>
+                                <div class="mb-4">
+                                    <textarea id="waMessage" class="form-control shadow-none custom-form-input" placeholder="Your Message" style="height: 120px; resize: none;" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill py-3 fw-bold fs-6 shadow-sm hover-lift d-flex justify-content-center align-items-center gap-2">
+                                    Send Message <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-light py-5 footer-gradient-border">
+        <div class="container pt-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+                        <img src="images/logo.png" alt="PharmaSoft Logo" style="height: 60px; object-fit: contain;">
+                    </a>
+                    <p class="text-muted pe-lg-4 mt-3">PharmaSoft is an industry-leading pharmacy ERP solution built for retail stores, chain pharmacies, and wholesale stockists.</p>
+
+                    <!-- Built By Badge in Box -->
+                    <div class="d-flex align-items-center p-3 rounded-3 border bg-white shadow-sm mt-3" style="border-color: #e2e8f0 !important;">
+                        <div class="bg-primary text-white d-flex justify-content-center align-items-center rounded-3 me-3" style="width: 48px; height: 48px; font-weight: bold; font-size: 1.5rem; background-color: #1a8472 !important;">
+                            D
+                        </div>
+                        <div>
+                            <p class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">Built & maintained by</p>
+                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 1.1rem;">Digitalks Techno LLP</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Products</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#home" class="text-muted text-decoration-none hover-primary">Home</a></li>
+                        <li class="mb-2"><a href="#features" class="text-muted text-decoration-none hover-primary">Features</a></li>
+                        <li class="mb-2"><a href="#workflow" class="text-muted text-decoration-none hover-primary">Workflow</a></li>
+                        <li class="mb-2"><a href="#preview" class="text-muted text-decoration-none hover-primary">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="https://digitalkstechno.com/about-us" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/ourproducts" class="text-muted text-decoration-none hover-primary">Our Products</a></li>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/contact-us" class="text-muted text-decoration-none hover-primary">Contact Us</a></li>
+                        <li class="mb-2"><a href="https://digitalkstechno.com/career" class="text-muted text-decoration-none hover-primary">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="fw-bold mb-4 text-uppercase tracking-wide small footer-title">Contact & Support</h6>
+                    <ul class="list-unstyled text-muted mb-4 mt-2">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-envelope me-3 text-primary fs-5"></i>
+                            <a href="mailto:info@digitalkstechno.com" class="text-muted text-decoration-none fs-6 hover-primary">info@digitalkstechno.com</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone me-3 text-primary fs-5"></i>
+                            <a href="tel:+917016268071" class="text-muted text-decoration-none fs-6 hover-primary">+91 70162 68071</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone me-3 text-primary fs-5"></i>
+                            <a href="tel:+918866779008" class="text-muted text-decoration-none fs-6 hover-primary">+91 88667 79008</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fa-solid fa-location-dot me-3 text-primary fs-5 mt-1"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=2nd+floor,+C1,+above+Adarsh+Farsan+Mart,+Baroda+Prestige,+Ganesh+Colony,+Varachha,+Surat,+Gujarat+395010" target="_blank" class="text-muted text-decoration-none fs-6 hover-primary" style="line-height: 1.6;">2nd floor, C1, above Adarsh Farsan Mart, Baroda Prestige, Ganesh Colony, Varachha, Surat, Gujarat 395010</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/DigiTalksTechnoLLP" class="btn btn-outline-secondary rounded-circle" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/digitalks_techno_llp/" class="btn btn-outline-secondary rounded-circle" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/105383945" class="btn btn-outline-secondary rounded-circle" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@DigiTalks_Techno_LLP" class="btn btn-outline-secondary rounded-circle" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-4 text-center">
+                <p class="text-muted small mb-0 fs-5">&copy; 2026 PharmaSoft Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
