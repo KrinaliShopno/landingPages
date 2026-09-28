@@ -8,6 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
@@ -36,6 +37,7 @@
                 <a href="#products">Products</a>
                 <a href="#solutions">Solutions</a>
                 <a href="#resources">Resources</a>
+                 <a href="#Workflow">Workflow</a>
                 <a href="#pricing">Pricing</a>
             </div>
             <div class="nav-actions">
@@ -204,7 +206,7 @@
     </section>
 
     <!-- Pharma-style Workflow Section -->
-    <section class="pharma-workflow pt-5 pb-5">
+    <section class="pharma-workflow pt-5 pb-5" id="Workflow">
         <div class="container">
             <div class="text-center mb-5">
                 <div class="badge-premium mx-auto mb-3" style="cursor: default;">
@@ -402,6 +404,132 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="badge-premium mb-3" style="cursor: default;">
+                        <span class="badge-dot" style="background: var(--c-brand);"></span> Let's Connect
+                    </div>
+                    <h2 class="section-title">Ready to scale your solar business?</h2>
+                    <p class="section-desc mt-4">Join hundreds of top solar enterprises using SolarCRM. Drop us a message and our team will get back to you shortly.</p>
+                    <div class="contact-features mt-4">
+                        <div class="c-feature"><i class="fa-solid fa-bolt text-brand"></i> Lightning fast setup</div>
+                        <div class="c-feature"><i class="fa-solid fa-headset text-brand"></i> 24/7 Priority support</div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="premium-form" id="contactForm" onsubmit="submitToWhatsApp(event)">
+                        <h3 class="mb-4">Get in Touch</h3>
+                        <div class="form-group">
+                            <input type="text" id="waName" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="waPhone" class="form-control" placeholder="Phone Number" pattern="[0-9]{10,12}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="waMessage" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-premium w-100" style="width: 100%; justify-content: center;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .contact-section {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .contact-info .section-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .contact-info .section-desc {
+            font-size: 1.15rem;
+            color: var(--t-muted);
+            margin-bottom: 2rem;
+        }
+        .c-feature {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .text-brand {
+            color: var(--c-brand);
+        }
+        .contact-form-wrapper {
+            background: var(--bg-main);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-massive);
+        }
+        .premium-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--c-navy);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--t-main);
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--c-brand);
+            box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-form-wrapper {
+                padding: 2rem;
+            }
+        }
+    </style>
+    
+    <script>
+        function submitToWhatsApp(e) {
+            e.preventDefault();
+            var name = document.getElementById('waName').value;
+            var phone = document.getElementById('waPhone').value;
+            var message = document.getElementById('waMessage').value;
+            
+            var text = "Hello SolarCRM,\n\nName: " + name + "\nPhone: " + phone + "\n\nMessage:\n" + message;
+            var encodedText = encodeURIComponent(text);
+            var whatsappUrl = "https://wa.me/917016268071?text=" + encodedText;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 
     <!-- Light Footer -->
     <footer class="footer-light">
@@ -428,7 +556,7 @@
                     <h4 class="fl-title">PRODUCTS</h4>
                     <a href="#products">Home</a>
                     <a href="#resources">Features</a>
-                    <a href="#">Workflow</a>
+                    <a href="#Workflow">Workflow</a>
                     <a href="#">Dashboard</a>
                 </div>
 
@@ -467,5 +595,36 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/917016268071" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: #FFF;
+            transform: scale(1.1);
+        }
+    </style>
 </body>
 </html>
